@@ -1,0 +1,68 @@
+<!DOCTYPE>
+<html>
+   <head>
+      <style>
+         body { 
+         margin: 0;
+         background: linear-gradient(to bottom right,  #05299E, #947BD3, #F0A7A0, #F26CA7);
+         }
+         .parent {
+         margin: 20%; 
+         padding: 10px; 
+         } 
+         .header {
+         background: #ffffff;
+         border: 3px solid #000000; 
+         padding: 10px; 
+         margin: 10px; 
+         color: black; 
+         padding: 2px; 
+         font: 15pt sans-serif;  
+         }
+         .child {
+         background: #ffffff;
+         border: 3px solid #000000; 
+         padding: 10px; 
+         margin: 10px; 
+         }
+         .next {
+         border: 3px solid #000000; 
+         color: black; 
+         padding: 10px; 
+         margin: 10px; 
+         width: 97%;
+         font: 15pt sans-serif;  
+         cursor: pointer;
+         background: white;
+         }
+      </style>
+   </head>
+   <body>
+      <script>
+         function weiter() {
+         document.testform.submitted.value=true;
+         document.testform.submit();
+         }
+      </script>
+      
+      <form name="testform" method="get" action="ImageServlet">
+         <input type="hidden" name="submitted">
+         <div class="parent" align="center">
+            <div class="header">
+               <h3>Choose category of image: </h3>
+            </div>
+            <div class="child" align="left">
+               <input type="radio" name="category" value="City"> City <br>
+               <input type="radio" name="category" value="Food"> Food <br>
+               <input type="radio" name="category" value="Cat"> Cat <br>
+               <input type="radio" name="category" value="Space"> Space <br>
+               <input type="radio" name="category" value="Car"> Car <br>
+               <input type="radio" name="category" value="Bike"> Bike <br>
+               <input type="radio" name="category" value="Lake"> Lake <br>
+               <input type="radio" name="category" value="House"> House
+            </div>
+            <input class="next" type="submit" value="Next page" onClick="javascript:weiter()" />
+         </div>
+      </form>
+   </body>
+</html>
